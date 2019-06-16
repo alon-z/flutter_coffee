@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'testsPage.dart';
+import 'brewingPage.dart';
 import 'beansPage.dart';
 import 'grindsPage.dart';
 
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
   Widget _buildBody() {
     switch(_currentTab) {
       case 0:
-        return TestsPage();
+        return BrewingPage();
       case 1:
         return BeansPage();
       case 2:
