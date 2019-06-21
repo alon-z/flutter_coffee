@@ -10,19 +10,17 @@ class BeansPage extends StatelessWidget {
     final BeansBloc beansBloc = Provider.of<BeansBloc>(context);
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.brown[400],
+        elevation: 3.0,
+        child: Icon(Icons.add),
+        onPressed: () => Navigator.push(context, MaterialPageRoute(
+          builder: (context) => AddBeansPage(),
+        )),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.add),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) => AddBeansPage(),
-              ));
-            },
-          )
-        ],
         title: Text("Beans"),
-        backgroundColor: Colors.brown[600],
       ),
       body: ListView(
         children: <Widget>[

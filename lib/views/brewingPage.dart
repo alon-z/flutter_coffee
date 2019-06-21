@@ -11,19 +11,17 @@ class BrewingPage extends StatelessWidget {
     final BrewBloc brewBloc = Provider.of<BrewBloc>(context);
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.brown[400],
+        elevation: 3.0,
+        child: Icon(Icons.add),
+        onPressed: () => Navigator.push(context, MaterialPageRoute(
+          builder: (context) => AddBrewPage(),
+        )),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.add),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) => AddBrewPage(),
-              ));
-            },
-          )
-        ],
         title: Text("Brewing"),
-        backgroundColor: Colors.brown[600],
       ),
       body: ListView(
         children: <Widget>[

@@ -11,19 +11,17 @@ class GrindsPage extends StatelessWidget {
     final GrindBloc grindBloc = Provider.of<GrindBloc>(context);
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        elevation: 3.0,
+        backgroundColor: Colors.brown[400],
+        child: Icon(Icons.add),
+        onPressed: () => Navigator.push(context, MaterialPageRoute(
+          builder: (context) => AddGrindPage(),
+        )),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.add),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) => AddGrindPage(),
-              ));
-            },
-          )
-        ],
         title: Text("Grinds"),
-        backgroundColor: Colors.brown[600],
       ),
       body: ListView(
         children: <Widget>[

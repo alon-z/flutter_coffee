@@ -14,7 +14,7 @@ class TabItem {
 }
 
 List<TabItem> _tabItems = [
-  TabItem(Icons.colorize, "Tests"),
+  TabItem(Icons.colorize, "Brewing"),
   TabItem(Icons.stars,"Beans"),
   TabItem(Icons.grid_on,"Grinds"),
   TabItem(Icons.settings,"Settings")
